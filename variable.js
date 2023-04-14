@@ -80,7 +80,7 @@ console.log(`value: ${nothing}, ${typeof nothing}`);
 let x; // undefined
 console.log(`value: ${x}, type: ${typeof x}`);
 
-// 3. symbol
+// 2-4. symbol
 // create unique identifiers for objects, data structure...
 const symbol1 = Symbol('id');
 const symbol2 = Symbol('id');
@@ -89,3 +89,16 @@ const jSymbol1 = Symbol.for('id');
 const jSymbol2 = Symbol.for('id');
 console.log(jSymbol1 === jSymbol2);
 console.log(`value: ${symbol1.description}, type: ${typeof symbol1}`);
+
+// 3. Dynamic typing
+// dynamically typed language
+let text = 'hello';
+console.log(text.charAt(0));
+console.log(`value: ${text}, ${typeof text}`);
+text = 1;
+console.log(`value: ${text}, ${typeof text}`);
+text = '7' + 5; // 75, string
+console.log(`value: ${text}, ${typeof text}`);
+text = '8' / '2'; // 4, number
+console.log(`value: ${text}, ${typeof text}`);
+console.log(text.charAt(0));
