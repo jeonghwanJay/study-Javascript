@@ -41,3 +41,51 @@ console.log(globalName);
 // - reduce human mistakes
 const daysInWeek = 7;
 const maxNumber = 5;
+
+// 2. Data types
+// primitive, single item: number, string, boolean, null, undefined, symbol
+// object, box container
+// function, first-class function
+
+// 2-1. numbmer
+const count = 29; // integer
+const size = 29.4; // decimal number
+console.log(`value: ${count}, type: ${typeof count}`); // template literals(string)
+console.log(`value: ${size}, type: ${typeof size}`);
+// number - special numberic values : infinity, -infinity, NaN
+const infinity = 1 / 0;
+const negativeInfinity = -1 / 0;
+const nAn = 'not a number' / 2;
+console.log(infinity);
+console.log(negativeInfinity);
+console.log(nAn);
+
+// 2-2. string
+const char = 'a';
+const jay = 'jay';
+const greeting = 'hello' + jay;
+console.log(`value: ${greeting}, ${typeof greeting}`);
+const helloJay = (`hi ${jay}!`);
+console.log(`value: ${helloJay}, ${typeof helloJay}`);
+
+// 2-3. boolean
+// false: 0, null, undefined, NaN, ''
+// true: any other value
+const canRead = true;
+const test = 3 < 1 // false
+console.log(`value: ${canRead}, type: ${typeof canRead}`);
+console.log(`value: ${test}. type: ${typeof test}`);
+let nothing = null; // null
+console.log(`value: ${nothing}, ${typeof nothing}`);
+let x; // undefined
+console.log(`value: ${x}, type: ${typeof x}`);
+
+// 3. symbol
+// create unique identifiers for objects, data structure...
+const symbol1 = Symbol('id');
+const symbol2 = Symbol('id');
+console.log(symbol1 === symbol2);
+const jSymbol1 = Symbol.for('id');
+const jSymbol2 = Symbol.for('id');
+console.log(jSymbol1 === jSymbol2);
+console.log(`value: ${symbol1.description}, type: ${typeof symbol1}`);
