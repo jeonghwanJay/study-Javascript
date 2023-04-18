@@ -5,7 +5,7 @@
 // use this for Vanila Javascript.
 'use strict';
 
-// 1. Variable(변수)
+// 1. Variable(변수), rw(read/write)
 
 // 1-1. var (don't ever use this!)
 // var hoisting (move declaration from bottom to top)
@@ -34,7 +34,7 @@ let globalName = 'global name';
 console.log(name);
 console.log(globalName);
 
-// 1-3. Constant
+// 1-3. Constant, r(read only)
 // favor immutable data type always for a few reasons:
 // - security
 // - thread safety
@@ -46,6 +46,8 @@ const maxNumber = 5;
 // primitive, single item: number, string, boolean, null, undefined, symbol
 // object, box container
 // function, first-class function
+// Immutable data types: primitive types, frozen objects (i.e. object.freeze())
+// Mutable data types: all objects by default are mutable in JS
 
 // 2-1. numbmer
 const count = 29; // integer
