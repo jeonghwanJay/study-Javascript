@@ -31,7 +31,7 @@ promise
 const fetchNumber = new Promise((reject, resolve) => {
     setTimeout(() => {
         reject(1)
-    }, 1000);
+    }, 1000); 
 });
 
 fetchNumber
