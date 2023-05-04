@@ -24,10 +24,12 @@ async function getGrape() {
 }
 
 async function getBanana() {
-    await delay(3000);
+    await delay(2000);
     return '🍌';
 }
 
+
+// Bad code
 async function pickFruit() {
     const grapePromise = getGrape();
     const bananaPromise = getBanana();
@@ -36,3 +38,16 @@ async function pickFruit() {
     return `${grape} + ${banana}`
 }
 pickFruit().then(console.log);
+
+// 3. useful Promise APIs
+function pickFruitAll() {
+    return Promise.all([getGrape(), getBanana()])
+    .then(fruits => fruits.join(' + '))
+}
+pickFruitAll().then(console.log);
+
+function pickOnlyOne() {
+    return Promise.race([getGrape(), getBanana()])
+    .then(fruits => console.log(fruits))
+}
+pickOnlyOne().then(console.log());
